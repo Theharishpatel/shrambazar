@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* ===============================
+   Root Variables
+   =============================== */
+:root {
+  /* Base Colors */
+  --color-bg-base: #ffffff;
+  --color-fg-base: #212121;
+
+  /* Neutral / Grayscale Palette */
+  --color-gray-900: #212121;
+  --color-gray-700: #424242;
+  --color-gray-500: #656565;
+  --color-gray-100: #f2f2f2;
+  --color-gray-50:  #fafafa;
+
+  /* Border Colors */
+  --color-border-light: #f2f2f2;
+  --color-border-dark: #212121;
+
+  /* Surface Colors */
+  --color-surface-primary: #ffffff;
+  --color-surface-muted: #f9f9f9;
+}
+
+/* ===============================
+   Theme Tokens (used in Tailwind)
+   =============================== */
+@theme inline {
+  --font-Inter: var(--font-geist-inter);
+  --color-background: var(--color-bg-base);
+  --color-foreground: var(--color-fg-base);
+}
+
+@theme {
+  /* Mapping for easier use */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-muted: var(--color-gray-500);
+  --color-border: var(--color-border-light);
+  --color-surface: var(--color-surface-primary);
+}
+
+/* ===============================
+   Base Layer Styles
+   =============================== */
+@layer base {
+  *,
+  html,
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-geist-inter);
+  }
+
+}
+
+@layer components {
+ .wrapper {
+    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .wrapper-md {
+    @apply max-w-3xl w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .wrapper-lg {
+    @apply max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
