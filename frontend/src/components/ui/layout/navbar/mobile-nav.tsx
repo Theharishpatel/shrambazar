@@ -6,7 +6,7 @@ import { NavItems } from './nav-items';
 import { AuthButtons } from './auth-buttons';
 import { UserMenu } from './user-menu';
 import { ContractorPostJob } from './contractor-post-job';
-import { LanguageSwitcher } from './language-switcher';
+
 import { Logo } from '@/components/common/logo';
 import { MdClose} from "react-icons/md";
 import { User } from './nav-items';

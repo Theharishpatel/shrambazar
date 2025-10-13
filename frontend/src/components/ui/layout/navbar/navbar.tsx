@@ -6,41 +6,29 @@ import { Logo } from '@/components/common/logo';
 import { NavItems } from './nav-items';
 import { AuthButtons } from './auth-buttons';
 import { UserMenu } from './user-menu';
-import { ContractorPostJob } from './contractor-post-job';
 import { LanguageSwitcher } from './language-switcher';
 import { MobileNav } from './mobile-nav';
 import { MdMenuOpen } from 'react-icons/md';
 
-
-// Mock user data - Replace with actual auth context
-const mockWorker: any = {
-  id: '1',
-  name: 'Rahul Kumar',
-  email: 'rahul@example.com',
-  role: 'worker',
-  isLoggedIn: true,
-};
-
-const mockContractor: any = {
-  id: '2',
-  name: 'Amit Singh',
-  email: 'amit@example.com',
-  role: 'contractor',
-  companyName: 'BuildWell Constructions',
-  isLoggedIn: true,
-};
+// Define proper TypeScript interfaces
+interface User {
+  id: string;
+  name: string;
+  email: string;
+  role: 'worker' | 'contractor';
+  isLoggedIn: boolean;
+  companyName?: string; // Optional for contractor
+}
 
 // For testing - Change this to see different states
- const CURRENT_USER = null; // Not logged in
-// const CURRENT_USER = mockWorker; // Worker logged in
-// const CURRENT_USER = mockContractor; // Contractor logged in
+const CURRENT_USER: User | null = null; // Not logged in
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [user] = useState<any>(CURRENT_USER); // Replace with actual auth state
+  const [user] = useState<User | null>(CURRENT_USER); // Use proper type instead of any
 
   return (
-    <header className="sticky  top-0 z-40 w-full   backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full backdrop-blur-md">
       <div className="wrapper md:wrapper-md lg:wrapper-lg">
         <div className="flex justify-between items-center h-17.5 md:h-20">
           {/* Left Section - Logo & Navigation */}
@@ -54,7 +42,6 @@ export function Navbar() {
 
           {/* Right Section - Actions */}
           <div className="flex items-center gap-5.5">
-         
             {/* Auth Buttons - Only when not logged in */}
             <AuthButtons 
               user={user} 
@@ -68,21 +55,20 @@ export function Navbar() {
                 className="hidden lg:block" 
               />
             )}
-          <div className='flex justify-center items-center'>
-               {/* Language Switcher - Always visible */}
-            <LanguageSwitcher />
+            
+            <div className='flex justify-center items-center'>
+              {/* Language Switcher - Always visible */}
+              <LanguageSwitcher />
 
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden  rounded-lg hover:bg-gray-100 transition-colors"
-              onClick={() => setIsMobileMenuOpen(true)}
-              aria-label="Open menu"
-            >
-             <MdMenuOpen size={30}/>
-            </button>
-
-          </div>
-           
+              {/* Mobile Menu Button */}
+              <button
+                className="lg:hidden rounded-lg hover:bg-gray-100 transition-colors"
+                onClick={() => setIsMobileMenuOpen(true)}
+                aria-label="Open menu"
+              >
+                <MdMenuOpen size={30}/>
+              </button>
+            </div>
           </div>
         </div>
       </div>

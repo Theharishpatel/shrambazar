@@ -1,20 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+
 
 export default function Home() {
-  const router = useRouter();
-  const [selectedRole, setSelectedRole] = useState<string>("");
-
-  const handleContinue = () => {
-    if (!selectedRole) {
-      alert("Please select a role");
-      return;
-    }
-    // Redirect to verification page with role as query param
-    router.push(`/verify?role=${selectedRole}`);
-  };
+  
 
   return (
     <div>
