@@ -40,6 +40,7 @@
   --color-text-muted: var(--color-gray-500);
   --color-border: var(--color-border-light);
   --color-surface: var(--color-surface-primary);
+  --color-surface-muted: var(--color-surface-muted);
 }
 
 /* ===============================
@@ -53,6 +54,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-geist-inter);
+    overflow-x: hidden;
+  }
+
+  button{
+    @apply cursor-pointer;
+  }
+
+  h1{
+    @apply font-medium text-[40px] leading-[50px] tracking-normal text-center;
   }
 
 }
