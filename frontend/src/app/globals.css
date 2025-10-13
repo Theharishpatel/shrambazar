@@ -65,6 +65,10 @@
     @apply font-medium text-[40px] leading-[50px] tracking-normal text-center;
   }
 
+  h2{
+    @apply font-medium text-2xl leading-[32px] tracking-normal ;
+  }
+
 }
 
 @layer components {

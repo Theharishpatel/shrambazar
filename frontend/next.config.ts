@@ -2,11 +2,14 @@ import type { NextConfig } from "next";
 import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
+  devIndicators:false,
+
   i18n: {
     locales: ['en', 'hi'],
     defaultLocale: 'en',
     // Remove domains property if not needed
   },
+
   turbopack: {
     root: __dirname,
   },
