@@ -22,13 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      suppressHydrationWarning
-        className={`${geistInter.variable}  antialiased`}
-      >
-        <Navbar />
-        {children}
-      </body>
+     <body suppressHydrationWarning className={`${geistInter.variable} antialiased `}>
+  
+    <Navbar />
+    {children}
+  
+</body>
+
     </html>
   );
 }

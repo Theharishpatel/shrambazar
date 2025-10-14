@@ -10,12 +10,12 @@ export function HeroSection() {
   const [selectedRole, setSelectedRole] = useState<'worker' | 'contractor'>('worker');
 
   return (
-    <section className=" bg-transperent py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-transperent py-20 lg:pb-20 lg:pt-60 ">
      
       <div className=" wrapper">
         {/* left ellips */}
          <div
-        className="absolute bg-gray-50 rounded-full  opacity-70"
+        className="absolute bg-gray-50 rounded-full "
         style={{
           width: "396px",
           height: "365.3px",
@@ -27,7 +27,7 @@ export function HeroSection() {
       />
       {/* right ellips */}
       <div
-        className="absolute bg-gray-50 rounded-full  opacity-70"
+        className="absolute bg-gray-50 rounded-full "
         style={{
           width: "396px",
           height: "365.3px",

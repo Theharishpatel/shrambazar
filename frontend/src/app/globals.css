@@ -16,8 +16,8 @@
   --color-gray-50:  #fafafa;
 
   /* Border Colors */
-  --color-border-light: #f2f2f2;
-  --color-border-dark: #212121;
+  --color-light: #f2f2f2;
+  --color-dark: #212121;
 
   /* Surface Colors */
   --color-surface-primary: #ffffff;
@@ -38,7 +38,7 @@
   --color-text-primary: var(--color-gray-900);
   --color-text-secondary: var(--color-gray-700);
   --color-text-muted: var(--color-gray-500);
-  --color-border: var(--color-border-light);
+  --color-border: var(--color-light);
   --color-surface: var(--color-surface-primary);
   --color-surface-muted: var(--color-surface-muted);
 }
@@ -54,7 +54,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-geist-inter);
-    overflow-x: hidden;
+    
   }
 
   button{
@@ -67,6 +67,14 @@
 
   h2{
     @apply font-medium text-2xl leading-[32px] tracking-normal ;
+  }
+
+   h3{
+    @apply font-medium text-xl leading-[24px] tracking-normal ;
+  }
+
+   p{
+    @apply font-normal text-base leading-[20px] tracking-normal ;
   }
 
 }

@@ -28,7 +28,7 @@ export function Navbar() {
   const [user] = useState<User | null>(CURRENT_USER); // Use proper type instead of any
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md">
+    <header className="fixed top-0 z-40 w-full backdrop-blur-md">
       <div className="wrapper md:wrapper-md lg:wrapper-lg">
         <div className="flex justify-between items-center h-17.5 md:h-20">
           {/* Left Section - Logo & Navigation */}

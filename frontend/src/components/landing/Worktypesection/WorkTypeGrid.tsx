@@ -22,7 +22,7 @@ export default function WorkTypeGrid() {
       <div className="wrapper md:wrapper-md lg-wrapper-lg">
         <h2 className="font-medium mb-6">Choose Your Work Type</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {workTypes.map((work) => (
             <div
               key={work.title}
