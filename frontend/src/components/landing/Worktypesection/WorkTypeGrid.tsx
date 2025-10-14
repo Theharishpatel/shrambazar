@@ -8,12 +8,12 @@ interface WorkType {
 }
 
 const workTypes: WorkType[] = [
-  { title: "Skilled Workers", image: "/images/WorkTypeImages/Skilled-Workers.png" },
-  { title: "Support Workers", image: "/images/WorkTypeImages/Support-Workers.png" },
-  { title: "Site Workforce", image: "/images/WorkTypeImages/Site-Workforce.png" },
-  { title: "Machinery Staff", image: "/images/WorkTypeImages/Machinery-Staff.png" },
-  { title: "Drivers & Transport", image: "/images/WorkTypeImages/Driver-&-Transport.png" },
-  { title: "Site Support Staff", image: "/images/WorkTypeImages/Site-Support-staff.png" },
+  { title: "Skilled Workers", image: "/images/WorkTypeImages/Skilled-Workers.webp" },
+  { title: "Support Workers", image: "/images/WorkTypeImages/Support-Workers.webp" },
+  { title: "Site Workforce", image: "/images/WorkTypeImages/Site-Workforce.webp" },
+  { title: "Machinery Staff", image: "/images/WorkTypeImages/Machinery-Staff.webp" },
+  { title: "Drivers & Transport", image: "/images/WorkTypeImages/Driver-&-Transport.webp" },
+  { title: "Site Support Staff", image: "/images/WorkTypeImages/Site-Support-staff.webp" },
 ];
 
 export default function WorkTypeGrid() {
